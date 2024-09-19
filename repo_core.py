@@ -27,7 +27,7 @@ lep_packer.pack_regions()
 website.process_thumbnails()
 website.create_html()
 
-os.system("(( speaker-test -t sine -f 440 > /dev/null)& pid=$! ; sleep 0.1s ; kill -9 $pid > /dev/null) > /dev/null")
+#os.system("(( speaker-test -t sine -f 440 > /dev/null)& pid=$! ; sleep 0.1s ; kill -9 $pid > /dev/null) > /dev/null")
 
 materials_thread.join()
 print("[Materials] Materials zipped")
