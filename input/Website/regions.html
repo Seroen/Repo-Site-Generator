@@ -1,0 +1,160 @@
+<html>
+	<head>
+		<title>Projects - Solar's Warehouse</title>
+		<link rel="icon" type="image/x-icon" href="solar.png">
+		<style>
+			/* |navbar_css| */
+
+			/* |basic_css| */
+
+			/* |box_grid_css| */
+
+			body {
+				background-image: url('Backgrounds/nomad dim.png');
+  				background-repeat: no-repeat;
+  				background-attachment: fixed;
+				background-size: cover;
+			}
+
+			.all_box {
+				display: grid;
+				grid-template-columns: 100%;
+				grid-column-gap: 0;
+				grid-row-gap: 20px;
+			}
+
+			.small_box {
+				display: block;
+				text-align: center;
+			}
+			.medium_box {
+				display: none;
+				text-align: center;
+			}
+			.large_box {
+				display: none;
+				text-align: center;
+			}
+
+			.big_grid_box {
+				margin: auto;
+				background-color: #222222AA;
+				padding: 10px;
+				max-width: 700px;
+			}
+
+			.big_ghost_box {
+				margin: auto;
+				background-color: #00000000;
+				padding: 0px;
+				min-height: 550px;
+				max-width: 720px;
+			}
+
+			@media only screen and (min-width: 1500px) {
+				.small_box {
+					display: none;
+				}
+				.medium_box {
+					display: block;
+				}
+				.large_box {
+					display: none;
+				}
+				.big_grid_box {
+					max-width: 1400px;
+				}
+				.big_ghost_box {
+					max-width: 1420px;
+					min-height: 1000px;
+				}
+			}
+
+			@media only screen and (min-width: 2200px) {
+				.small_box {
+					display: none;
+				}
+				.medium_box {
+					display: none;
+				}
+				.large_box {
+					display: block;
+				}
+				.big_grid_box {
+					max-width: 2100px;
+				}
+				.big_ghost_box {
+					max-width: 2120px;
+					min-height: 1400px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		|navbar|
+
+		<br>
+		<br>
+		<br>
+		<h1 class="header">Intsructions</h1>
+		<p style="width: 1000px;"><strong>To install a project pack:<br>1: Extract the downloaded zip<br>2: Copy the txts and pngs to your Leditor's Projects folder<br></strong><br>
+			Community / Offical Editor: /LevelEditorProjects<br>
+			Henry Markles' Leditor: /projects<br>
+			Rained: /Data/LevelEditorProjects<br>
+			RWE+ / Ogscule: /LevelEditorProjects<br>
+		</p>
+
+		<!-- <div class="all_box">
+			<div class="big_ghost_box">
+				<div class="big_grid_box" id="All Regions_img" onmouseenter="boxEnter(this.id)" onmouseleave="boxLeave(this.id)">
+					<a href="Dist/Project Files.zip"><h1>All Project Files</h1></a>
+					<a href="Dist/Project Files.zip"><img src="Thumbnails/Regions/All Regions Small.webp" alt="All Region Map" width="683" height="384" class="small_box"></a>
+					<a href="Dist/Project Files.zip"><img src="Thumbnails/Regions/All Regions Medium.webp" alt="All Region Map" width="1366" height="768" class="medium_box"></a>
+					<a href="Dist/Project Files.zip"><img src="Thumbnails/Regions/All Regions Large.webp" alt="All Region Map" width="2049" height="1152" class="large_box"></a>
+					<h1 style="display: none;" id="All Regions_info">Map by: Nocturne</h1>
+				</div>
+			</div>
+		</div> -->
+		
+		<h1 class="header">Vanilla + MSC Regions</h1>
+		<div class="box_grid">
+			|vanilla_boxes|
+		</div>
+
+		<h1 class="header">Templates</h1>
+		<div class="box_grid">
+			|template_boxes|
+		</div>
+
+		<h1 class="header">Region Packs</h1>
+		<div class="box_grid">
+			|pack_boxes|
+		</div>
+
+		<h1 class="header">Region Expansions</h1>
+		<div class="box_grid">
+			|expansion_boxes|
+		</div>
+
+		<h1 class="header">Modded Regions</h1>
+		<div class="box_grid">
+			|boxes|
+		</div>
+
+		<script>
+			// |navbar_script|
+
+			// function boxEnter(img_id) {
+			// 	links_id = img_id.replace("img", "info");
+			// 	links_element = document.getElementById(links_id);
+			// 	links_element.style.display = "block";
+			// }
+
+			// function boxLeave(img_id) {
+			// 	links_id = img_id.replace("img", "info");
+			// 	links_element = document.getElementById(links_id);
+			// 	links_element.style.display = "none";
+			// }
+		</script>
+	</body>
+</html>

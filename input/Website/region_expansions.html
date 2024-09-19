@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>Regions - Solar's Warehouse</title>
+		<style>
+			/* |navbar_css| */
+
+			/* |basic_css| */
+
+			/* |box_grid_css| */
+
+			body {
+				background-image: url('Backgrounds/wanderer clean.png');
+  				background-repeat: no-repeat;
+  				background-attachment: fixed;
+				background-size: cover;
+			}
+		</style>
+	</head>
+	<body>
+		|navbar|
+
+		<h1>Region Expansions</h1>
+
+		<div class="box_grid">
+			|boxes|
+		</div>
+
+		<script>
+			// |navbar_script|
+
+			function boxEnter(img_id) {
+				links_id = img_id.replace("img", "info");
+				links_element = document.getElementById(links_id);
+				links_element.style.display = "block";
+			}
+
+			function boxLeave(img_id) {
+				links_id = img_id.replace("img", "info");
+				links_element = document.getElementById(links_id);
+				links_element.style.display = "none";
+			}
+		</script>
+	</body>
+</html>

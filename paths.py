@@ -1,0 +1,18 @@
+input = "input"
+input_repo = f"{input}/Modded-Regions-Starter-Pack-main"
+input_graphics = f"{input_repo}/Graphics"
+input_tiles_init = f"{input_graphics}/Init.txt"
+input_comms_init = f"{input_graphics}/CommsInit.txt"
+input_classic_init = f"{input_graphics}/ClassicInit.txt"
+input_separated_init = f"{input_graphics}/ModdedSeparatedInit.txt"
+input_materials = f"{input_repo}/Materials"
+input_props = f"{input_repo}/Props"
+input_props_init = f"{input_props}/Init.txt"
+input_vanilla = f"{input_repo}/Vanilla Pack"
+
+input_projects = f"{input}/LevelEditorProjects"
+input_templates = f"{input_projects}/Templates"
+
+packs_path = "Website/Dist/Packs"
+input_thumbnails = f"{input}/Website/Thumbnails"
+input_tiles_thumbnails = f"{input_thumbnails}/Tile Packs"
