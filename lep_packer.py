@@ -84,7 +84,9 @@ def pack_region(folder, region):
 			if ".txt" not in file and ".png" not in file:
 				for sub_file in os.listdir(f"{folder}/{region}/{file}"):
 					region_zip.write(f"{folder}/{region}/{file}/{sub_file}", f"{file}/{sub_file}")
-					get_region_id(region, sub_file)
+
+					if "connection" not in folder:
+						get_region_id(region, sub_file)
 			else:
 				region_zip.write(f"{folder}/{region}/{file}", f"{file}")
 				get_region_id(region, file)
