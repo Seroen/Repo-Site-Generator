@@ -10,8 +10,9 @@ input_props = f"{input_repo}/Props"
 input_props_init = f"{input_props}/Init.txt"
 input_vanilla = f"{input_repo}/Vanilla Pack"
 
-input_projects = f"{input}/LevelEditorProjects"
+input_projects = f"{input_repo}/LevelEditorProjects"
 input_templates = f"{input_projects}/Templates"
+input_region_packs = f"{input_projects}/Region Packs"
 
 packs_path = "Website/Dist/Packs"
 input_thumbnails = f"{input}/Website/Thumbnails"

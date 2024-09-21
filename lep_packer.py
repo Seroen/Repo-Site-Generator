@@ -1,5 +1,6 @@
 import os
 import utils
+import paths
 import zipfile
 from zipfile import ZipFile
 from threading import Thread
@@ -64,7 +65,9 @@ def pack_pack(pack_folder, dummy):
 
 
 def pack_packs():
-	for pack_folder in pack_folders:
+	for pack_folder in os.listdir(paths.input_region_packs):
+		pack_folder = f"{paths.input_region_packs}/{pack_folder}"
+
 		pack_thread = Thread(target=pack_pack, args=(pack_folder, False))
 		pack_thread.start()
 
