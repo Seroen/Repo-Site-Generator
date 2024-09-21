@@ -3,7 +3,7 @@ python3 repo_core.py
 echo Website compiled
 
 :: Commit website
-cd /website
+cd ./website
 
 git add -A
 git commit -m "Quick website commit"
@@ -17,7 +17,7 @@ xcopy /s Website/.git input/Website/.git
 echo Website commited
 
 :: Commit repo
-cd /input/Modded-Regions-Starter-Pack-main
+cd ./input/Modded-Regions-Starter-Pack-main
 
 git add -A
 git commit -m "Quick repo commit"
