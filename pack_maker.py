@@ -7,7 +7,6 @@ import paths
 
 
 packs_to_make = ["Tile Packs", "Prop Packs"]
-input_folder = "input/Modded-Regions-Starter-Pack-main"
 output_folder = "processed repo"
 forbidden_folders = ["Machinery", "Machinery2", "Metal", "MiscDonalds", "Stone"]
 
@@ -50,7 +49,7 @@ def locate_case(input):
 def zip_pack():
 	for folder in os.listdir(f"{output_folder}/{pack}"):
 		if folder not in forbidden_folders:
-			zip_path = f"{paths.packs_path}/{pack}/{folder}.zip"
+			zip_path = f"{paths.dist_packs_path}/{pack}/{folder}.zip"
 			zip = ZipFile(zip_path, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9)
 
 			for file in os.listdir(f"{output_folder}/{pack}/{folder}"):
@@ -67,9 +66,9 @@ for pack in packs_to_make:
 	# Get pack source folder
 	match pack:
 		case "Tile Packs":
-			pack_source = f"{input_folder}/Graphics"
+			pack_source = f"{paths.input_repo}/Graphics"
 		case "Prop Packs":
-			pack_source = f"{input_folder}/Props"
+			pack_source = f"{paths.input_repo}/Props"
 		
 	# Load Init
 	init = open(f"{pack_source}/Init.txt", "r")

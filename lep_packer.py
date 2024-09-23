@@ -7,14 +7,10 @@ from threading import Thread
 import metadata
 
 
-input_projects_folder = "input/Modded-Regions-Starter-Pack-main/LevelEditorProjects"
-#folder_with_regions = [f"{input_projects_folder}/Vanilla Regions and Downpour Regions", f"{input_projects_folder}/Modded Regions", f"{input_projects_folder}/Sunlit Trail", f"{input_projects_folder}/Old New Horizons"]
-folders_with_regions = [f"{input_projects_folder}/Regions", f"{input_projects_folder}/Region Expansions", f"{input_projects_folder}/Vanilla+MSC Regions"]
+#folder_with_regions = [f"{paths.input_projects}/Vanilla Regions and Downpour Regions", f"{paths.input_projects}/Modded Regions", f"{paths.input_projects}/Sunlit Trail", f"{paths.input_projects}/Old New Horizons"]
+folders_with_regions = [f"{paths.input_projects}/Regions", f"{paths.input_projects}/Region Expansions", f"{paths.input_projects}/Vanilla+MSC Regions"]
 invalid_regions = ["Arenas", "Gates", "Tests"]
-all_zip_path = "Website/Dist/Project Files.zip"
-region_zip_output_path = "Website/Dist"
-pack_folders = [f"{input_projects_folder}/Region Packs/Sunlit Trail", f"{input_projects_folder}/Region Packs/Shrouded Assembly", f"{input_projects_folder}/Region Packs/Old New Horizons"]
-template_folders = [f"{input_projects_folder}/Templates/Size Templates", f"{input_projects_folder}/Templates/Gate Templates", f"{input_projects_folder}/Templates/Shelter Templates"]
+template_folders = [f"{paths.input_projects}/Templates/Size Templates", f"{paths.input_projects}/Templates/Gate Templates", f"{paths.input_projects}/Templates/Shelter Templates"]
 
 
 # gate_files = []
@@ -48,7 +44,7 @@ def get_region_id(region, file):
 
 def pack_templates():
 	for template_folder in template_folders:
-		template_zip_path = f"Website/Dist/Templates/{os.path.split(template_folder)[1]}.zip"
+		template_zip_path = f"{paths.dist_path}/Templates/{os.path.split(template_folder)[1]}.zip"
 
 		utils.recursive_zip(template_zip_path, [f"{template_folder}"])
 
@@ -57,7 +53,7 @@ def pack_templates():
 
 pack_threads = []
 def pack_pack(pack_folder, dummy):
-	pack_zip_path = f"Website/Dist/Region Packs/{os.path.split(pack_folder)[1]}.zip"
+	pack_zip_path = f"{paths.dist_path}/Region Packs/{os.path.split(pack_folder)[1]}.zip"
 
 	utils.recursive_zip(pack_zip_path, [f"{pack_folder}"])
 
@@ -80,7 +76,7 @@ def pack_packs():
 
 def pack_region(folder, region):
 	if region not in invalid_regions:
-		region_zip_path = f"{region_zip_output_path}/{os.path.split(folder)[1]}/{region}.zip"
+		region_zip_path = f"{paths.dist_path}/{os.path.split(folder)[1]}/{region}.zip"
 		region_zip = ZipFile(region_zip_path, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9)
 		
 		for file in os.listdir(f"{folder}/{region}"):

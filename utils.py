@@ -38,7 +38,7 @@ def lerp_color(source_color, dest_color, ammount):
 	#return a + ((b - a) * t)
 
 
-palette_img = Image.open("input/palette.png")
+palette_img = Image.open("palette.png")
 def render_palette(path):
 	img = Image.open(path)
 

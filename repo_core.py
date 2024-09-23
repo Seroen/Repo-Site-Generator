@@ -10,13 +10,13 @@ import website
 
 website.create_file_structure()
 
-vanilla_thread = Thread(target=utils.recursive_zip, args=("Website/Dist/Vanilla Pack.zip", [paths.input_vanilla]))
+vanilla_thread = Thread(target=utils.recursive_zip, args=(f"{paths.dist_path}/Vanilla Pack.zip", [paths.input_vanilla]))
 vanilla_thread.start()
 
-resources_thread = Thread(target=utils.recursive_zip, args=("Website/Dist/Resources.zip", [paths.input_graphics, paths.input_materials, paths.input_props]))
+resources_thread = Thread(target=utils.recursive_zip, args=(f"{paths.dist_path}/Resources.zip", [paths.input_graphics, paths.input_materials, paths.input_props]))
 resources_thread.start()
 
-materials_thread = Thread(target=utils.recursive_zip, args=("Website/Dist/Materials.zip", [paths.input_materials]))
+materials_thread = Thread(target=utils.recursive_zip, args=(f"{paths.dist_path}/Materials.zip", [paths.input_materials]))
 materials_thread.start()
 
 import pack_maker

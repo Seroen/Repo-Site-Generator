@@ -1,5 +1,6 @@
-input = "input"
-input_repo = f"{input}/Modded-Regions-Starter-Pack-main"
+input = ".."
+input_repo = f"{input}/Modded-Regions-Starter-Pack"
+input_projects = f"{input_repo}/LevelEditorProjects"
 input_graphics = f"{input_repo}/Graphics"
 input_tiles_init = f"{input_graphics}/Init.txt"
 input_comms_init = f"{input_graphics}/CommsInit.txt"
@@ -14,6 +15,11 @@ input_projects = f"{input_repo}/LevelEditorProjects"
 input_templates = f"{input_projects}/Templates"
 input_region_packs = f"{input_projects}/Region Packs"
 
-packs_path = "Website/Dist/Packs"
-input_thumbnails = f"{input}/Website/Thumbnails"
+website_source = "Website Source"
+input_thumbnails = f"{website_source}/Thumbnails"
 input_tiles_thumbnails = f"{input_thumbnails}/Tile Packs"
+
+
+output = "../Warehouse"
+dist_path = f"{output}/Dist"
+dist_packs_path = f"{dist_path}/Packs"
