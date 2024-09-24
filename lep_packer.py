@@ -84,7 +84,7 @@ def pack_region(folder, region):
 				for sub_file in os.listdir(f"{folder}/{region}/{file}"):
 					region_zip.write(f"{folder}/{region}/{file}/{sub_file}", f"{file}/{sub_file}")
 
-					if "connection" not in folder:
+					if "Connection" not in folder:
 						get_region_id(region, sub_file)
 			else:
 				region_zip.write(f"{folder}/{region}/{file}", f"{file}")
