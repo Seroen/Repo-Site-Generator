@@ -85,10 +85,19 @@ def render_palette(path):
 	
 	img.save(path)
 
-# render_palette("input/Website/Thumbnails/Tile Packs/Water Trains.png")
+# render_palette("Website Source/Thumbnails/Tile Packs/Water Trains.png")
 
-# for file in os.listdir("input/Website/Thumbnails/Prop Packs"):
-# 	render_palette(f"input/Website/Thumbnails/Prop Packs/{file}")
 
-# for file in os.listdir("input/Website/Thumbnails/Tile Packs"):
-# 	render_palette(f"input/Website/Thumbnails/Tile Packs/{file}")
+def tile_palettes():
+	shutil.rmtree("Website Source/Thumbnails/Tile Packs")
+	shutil.copytree("Website Source/Thumbnails/Tile Packs Source", "Website Source/Thumbnails/Tile Packs")
+
+	for file in os.listdir("Website Source/Thumbnails/Tile Packs"):
+		render_palette(f"Website Source/Thumbnails/Tile Packs/{file}")
+
+def prop_palettes():
+	shutil.rmtree("Website Source/Thumbnails/Prop Packs")
+	shutil.copytree("Website Source/Thumbnails/Prop Packs Source", "Website Source/Thumbnails/Prop Packs")
+
+	for file in os.listdir("Website Source/Thumbnails/Prop Packs"):
+		render_palette(f"Website Source/Thumbnails/Prop Packs/{file}")
