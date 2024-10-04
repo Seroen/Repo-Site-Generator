@@ -71,7 +71,7 @@ for pack in packs_to_make:
 			pack_source = f"{paths.input_repo}/Props"
 		
 	# Load Init
-	if "Tile" in pack_source:
+	if "Graphics" in pack_source:
 		init = open(f"{pack_source}/ReorganizedInit.txt", "r")
 	else:
 		init = open(f"{pack_source}/Init.txt", "r")
