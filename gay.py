@@ -2,7 +2,7 @@ import colorsys
 import paths
 
 
-init_file = open(paths.input_props_init)
+init_file = open(paths.input_reorganized_init)
 init_lines = init_file.readlines()
 init_file.close()
 
