@@ -6,7 +6,7 @@ max_len = 43 #29
 current_len = 0
 
 
-init_file = open(paths.input_classic_init)
+init_file = open(paths.input_comms_init)
 init_lines = init_file.readlines()
 init_file.close()
 

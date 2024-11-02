@@ -72,7 +72,7 @@ for pack in packs_to_make:
 		
 	# Load Init
 	if "Graphics" in pack_source:
-		init = open(f"{pack_source}/ReorganizedInit.txt", "r")
+		init = open(paths.input_reorganized_init, "r")
 	else:
 		init = open(f"{pack_source}/Init.txt", "r")
 	init_lines = init.readlines()
