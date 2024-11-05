@@ -1,6 +1,6 @@
 recompile = True
 
-featured_regions = ["The Steamyards", "Dusty Wireworks", "Preservatory", "Hanging Gardens"]
+featured_regions = ["The Steamyards", "Dusty Wireworks", "Preservatory", "Hanging Gardens", "Eventide"]
 
 regions = {
 	"Sunlit Trail": {
