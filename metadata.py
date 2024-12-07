@@ -1,6 +1,6 @@
 recompile = True
 
-featured_regions = ["The Steamyards", "Dusty Wireworks", "Preservatory", "Hanging Gardens", "Eventide"]
+featured_regions = ["Weakenend Platform", "Underpass", "Drainage Canal", "Global Hyper-Transit System", "Freezing Flights"]
 
 regions = {
 	"Sunlit Trail": {

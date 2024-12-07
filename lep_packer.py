@@ -77,7 +77,7 @@ def pack_packs():
 def pack_region(folder, region):
 	if region not in invalid_regions:
 		region_zip_path = f"{paths.dist_path}/{os.path.split(folder)[1]}/{region}.zip"
-		region_zip = ZipFile(region_zip_path, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9)
+		region_zip = ZipFile(region_zip_path, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9, strict_timestamps=False)
 		
 		for file in os.listdir(f"{folder}/{region}"):
 			if ".txt" not in file and ".png" not in file:

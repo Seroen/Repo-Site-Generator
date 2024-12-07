@@ -4,7 +4,7 @@ input_init_file = open(paths.input_classic_init)
 input_init_lines = input_init_file.readlines()
 input_init_file.close()
 
-compare_init_file = open("wip/Init.txt")
+compare_init_file = open(paths.input_reorganized_init)
 compare_init_lines = compare_init_file.readlines()
 compare_init_file.close()
 
