@@ -1,5 +1,5 @@
 input = ".."
-input_repo = f"{input}/Modded-Regions-Starter-Pack"
+input_repo = f"{input}/Seroens-Repo-Files"
 input_projects = f"{input_repo}/LevelEditorProjects"
 input_graphics = f"{input_repo}/Graphics"
 input_inits = f"{input_graphics}/Inits"
@@ -22,6 +22,7 @@ input_thumbnails = f"{website_source}/Thumbnails"
 input_tiles_thumbnails = f"{input_thumbnails}/Tile Packs"
 
 
-output = "../Warehouse"
+output = "../Seroens-Repo"
 dist_path = f"{output}/Dist"
 dist_packs_path = f"{dist_path}/Packs"
+dist_region_packs = f"{output}/Dist/Region Packs"

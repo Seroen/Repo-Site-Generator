@@ -28,7 +28,7 @@ def create_file_structure():
 			if os.path.isdir(f"{paths.output}/{folder}"):
 				shutil.rmtree(f"{paths.output}/{folder}")
 			else:
-				os.remove(f"../Warehouse/{folder}")
+				os.remove(f"{paths.output}/{folder}")
 
 	shutil.copytree(f"{paths.website_source}/Fonts", f"{paths.output}/Fonts")
 	shutil.copytree(f"{paths.website_source}/Backgrounds", f"{paths.output}/Backgrounds")
@@ -57,7 +57,7 @@ def create_file_structure():
 
 	shutil.copyfile(f"{paths.website_source}/Thumbnails/Vanilla Pack.webp", f"{paths.output}/Thumbnails/Vanilla Pack.webp")
 	shutil.copyfile(f"{paths.website_source}/Thumbnails/crash.png", f"{paths.output}/Thumbnails/crash.png")
-	shutil.copyfile(f"{paths.website_source}/solar.png", f"{paths.output}/solar.png")
+	shutil.copyfile(f"{paths.website_source}/icon.png", f"{paths.output}/icon.png")
 
 	shutil.copytree(f"{paths.website_source}/Thumbnails/Leditors", f"{paths.output}/Thumbnails/Leditors")
 	shutil.copytree(f"{paths.website_source}/Thumbnails/Servers", f"{paths.output}/Thumbnails/Servers")
@@ -240,7 +240,7 @@ def create_region_html(input_html, type):
 
 	output_html = output_html.replace("|vanilla_boxes|", make_boxes(f"{paths.output}/Dist/Vanilla+MSC Regions", "Vanilla+MSC Regions"))
 	output_html = output_html.replace("|template_boxes|", make_boxes(f"{paths.output}/Dist/Templates", "Templates"))
-	output_html = output_html.replace("|pack_boxes|", make_boxes(f"{paths.output}/Dist/Region Packs", "Region Packs"))
+	output_html = output_html.replace("|pack_boxes|", make_boxes(paths.dist_region_packs, "Region Packs"))
 	output_html = output_html.replace("|expansion_boxes|", make_boxes(f"{paths.output}/Dist/Region Expansions", "Region Expansions"))
 	output_html = output_html.replace("|boxes|", make_boxes(f"{paths.output}/Dist/Regions", "Regions"))
 	
